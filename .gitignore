@@ -1,0 +1,8 @@
+.idea/compiler.xml
+*.idea/
+*.idea/.*
+*.log
+*.cmd
+.idea/uiDesigner.xml
+.idea/*
+*/.mvn/
