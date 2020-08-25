@@ -1,6 +1,9 @@
-package com.example.demo.controller;
+package com.eurekaclient.client2.controller;
 
+import com.netflix.appinfo.InstanceInfo;
+import com.netflix.discovery.DiscoveryClient;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.net.URI;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -20,6 +24,7 @@ import java.util.Map;
 @RequestMapping("/v1/user/")
 public class UserController {
 
+
     private static Map<String,String> users;
     static{
         users = new HashMap<>(8);
@@ -28,10 +33,9 @@ public class UserController {
         }
     }
 
-
     @GetMapping("users")
     public String getUserList(){
-        log.info("调用8092服务");
+        log.info("调用8094服务");
         return new JSONObject(users).toString();
     }
 
