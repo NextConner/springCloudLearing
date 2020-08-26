@@ -31,6 +31,7 @@ public class InstanceController {
     @Autowired
     private LoadBalancerClient loadBalancerClient;
 
+
     /**
      * 根据基于注册中心IP地址，根据服务名称检索服务实例
      */
@@ -40,21 +41,29 @@ public class InstanceController {
     }
 
 
-
     /**
      * 基于 DiscoveryClient 获取服务信息
      * @return
      */
+    @Deprecated
     @RequestMapping(value = "/client/{serviceName}")
     public Object getServiceByClient(@PathVariable String serviceName){
+        //禁用 eureka 之后无效
         return discoveryClient.getInstances(serviceName);
     }
+
 
     @RequestMapping()
     public String serviceList(){
         return restTemplate.getForObject(EUREKA_SERVER,String.class);
     }
 
+
+    /**
+     *  基于 loadBalancerClient 选择服务
+     * @param serviceName
+     * @return
+     */
     @RequestMapping(value = "/loadBalance/{serviceName}")
     public Object getServiceByLoadBalance(@PathVariable String serviceName){
         return loadBalancerClient.choose(serviceName);

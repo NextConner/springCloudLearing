@@ -1,0 +1,17 @@
+ribbon:
+ eureka:
+   enabled: false
+ ConnectTimeout: 2000
+ ReadTimeout: 5000
+ MaxTotalConnections: 500
+ MaxTotalConnectionsPerHost: 500
+ maxAutoRetries: 2
+ maxAutoRetriesNextServer: 3
+ okToRetryOnAllOperations: true
+ retryableStatusCode: 500
+
+eureka:
+ instance:
+   metadata-map:
+     starter: zjt
+     ender: jtz

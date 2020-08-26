@@ -1,5 +1,6 @@
 package com.zt.consumer.config;
 
+import com.zt.consumer.annotation.MyLoadBalanced;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
