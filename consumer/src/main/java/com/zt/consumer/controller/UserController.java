@@ -40,7 +40,8 @@ public class UserController {
 
     @GetMapping("/allUserNew")
     public String getAllUser() {
-        return userFeignServer.usersNew();
+        return userFeignServer.users();
     }
+
 
 }

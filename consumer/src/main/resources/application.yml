@@ -15,3 +15,8 @@ eureka:
    metadata-map:
      starter: zjt
      ender: jtz
+
+# 开启 feign 和 hystrix 熔断
+feign:
+  hystrix:
+    enabled: true
