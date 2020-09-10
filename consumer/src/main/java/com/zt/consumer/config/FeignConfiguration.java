@@ -24,10 +24,10 @@ public class FeignConfiguration {
     /**
      *  契约配置，使feign支持原生注解方式
      */
-    @Bean
-    public Contract feignContract(){
-        return new Contract.Default();
-    }
+//    @Bean
+//    public Contract feignContract(){
+//        return new Contract.Default();
+//    }
 
     /**
      *  基于feign的认证，请求过滤器
