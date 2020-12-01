@@ -33,6 +33,9 @@ build/
 .vscode/
 
 *./idea
+*mvnw
 .mvn*
 *mvnw
+.*/mvnw
+.*mvnw
 *\mvnw*

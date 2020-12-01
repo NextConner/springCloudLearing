@@ -11,7 +11,7 @@
     <groupId>com.zteureaka</groupId>
     <artifactId>consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Consumer</name>
+    <name>consumer</name>
     <description>eureka server consumer</description>
 
     <properties>
